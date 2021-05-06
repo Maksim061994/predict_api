@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  predict_api:
+    build: .
+    ports: 
+      - "4444:4444"
+    restart: always
+    volumes:
+      - ${PWD}/data_science/models:/app/models
+    logging:
+      driver: "json-file"
+      options:
+          max-size: "200k"
+          max-file: "10"
+    container_name: predict_api

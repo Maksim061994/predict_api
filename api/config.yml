@@ -1,0 +1,5 @@
+models:
+    happy_model: 
+        describe: "Модель по распознаванию улыбки на фотографии"
+        versions: [1]
+        uri: /v1/models/happy_model
